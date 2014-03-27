@@ -95,10 +95,14 @@ delete '/things/:id/delete' do
   content_type :json
   @thing = Thing.get(params[:id].to_i)
 
-  if @thing.destroy
-    {:success => "ok"}.to_json
+  if @thing
+    if @thing.destroy
+      {:success => "ok"}.to_json
+    else
+      halt 500
+    end
   else
-    halt 500
+    halt 404
   end
 end
 
