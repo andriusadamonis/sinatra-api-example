@@ -4,6 +4,8 @@ gem 'sinatra'
 gem 'json'
 gem 'data_mapper'
 
+gem 'warden'
+
 # When developing an app locally you can use SQLite which is a relational
 # database stored in a file. It's easy to set up and just fine for most
 # development situations.

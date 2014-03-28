@@ -8,6 +8,7 @@
       // Load THINGS data immediately
       $.ajax({
         url: '/things',
+        headers: { 'access_token': 'youhavenoprivacyandnosecrets' },
         method: 'GET'
       }).done(function (data) {
         data.forEach(function (d) {
@@ -25,6 +26,7 @@
 
         $.ajax({
           url: '/things',
+          headers: { 'access_token': 'youhavenoprivacyandnosecrets' },
           method: 'POST',
           data: data
         }).done(function (response) {
